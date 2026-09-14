@@ -11,14 +11,14 @@
     <!-- LOADING SCREEN -->
     <div id="loading-screen">
         <div class="spinner"></div>
-        <p style="margin-top: 15px; font-weight: bold; color: #555;">Loading...</p>
+        <p class="Loading">Loading...</p>
     </div>
 
     <!-- LOGIN SCREEN -->
     <div id="login-screen" class="screen active">
         <div class="login-card">
             <h2 id="login-church-title">MasterPeace International</h2>
-            <p style="color: #ecb314; font-size: 0.65rem; margin-bottom: 20px;">EMPOWERING LIVES, BUILDING KINGDOM, ADVANCING PEACE</p>
+            <p class="quote">EMPOWERING LIVES, BUILDING KINGDOM, ADVANCING PEACE</p>
             
             <form id="login-form">
                 <div class="form-group">
@@ -75,7 +75,7 @@
             <!-- CEOs Sidebar -->
             <aside class="sidebar">
                 <h3>Meet the CEOs</h3>
-                <p style="font-size: 0.8rem; color: #666; margin-bottom: 10px;">Members of our team:</p>
+                <p class="quote-introducton">Members of our team:</p>
                 <ul class="ceo-list" id="ceo-list-container"></ul>
             </aside>
         </div>
@@ -166,7 +166,7 @@
                     </div>
                     <div class="form-group">
                         <label>Role</label>
-                        <select id="new-editor-role" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
+                        <select id="new-editor-role">
                             <option value="editor">Editor</option>
                             <option value="ceo">CEO</option>
                             <option value="admin">Admin</option>
