@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(180deg, #918b2ce6, #000000);
+    background: linear-gradient(150deg, #ef8e06,#f4f3f0e6, #ef8e06, #000000);
 }
 
 /* Screen Management */
@@ -68,11 +68,11 @@ body.owner-mode .admin-only {
 #login-screen {
     justify-content: center;
     align-items: center;
-    background-color: #000080;
+    background: linear-gradient(193deg, #ef8e06,#f4f3f0e6, #ef8e06, #000000);
 }
 
 .login-card {
-    background: #ffffff;
+    background: #fdfdfd;
     padding: 30px;
     border-radius: 8px;
     width: 100%;
