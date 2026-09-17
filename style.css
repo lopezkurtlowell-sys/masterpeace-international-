@@ -22,15 +22,6 @@ body {
     flex-direction: column;
 }
 
-/* Admin / Viewer visibility logic */
-body.viewer-mode .admin-only {
-    display: none !important;
-}
-
-body.owner-mode .admin-only {
-    display: block;
-}
-
 /* LOADING SCREEN */
 #loading-screen {
     position: fixed;
@@ -93,7 +84,7 @@ body.owner-mode .admin-only {
     font-weight: bold;
 }
 
-.form-group input, .form-group textarea {
+.form-group input, .form-group textarea, .form-group select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -334,6 +325,7 @@ body.owner-mode .admin-only {
     border-radius: 4px;
     font-size: 0.9rem;
 }
+
 /* HO STATUS BUTTON */
 .btn-ho {
     background-color: #28a745;
@@ -392,28 +384,33 @@ body.owner-mode .admin-only {
     font-size: 1.5rem;
     cursor: pointer;
 }
-/* Additional inline styles for the HO Status Table Tab */
+
+/* HO Status Table Tab */
 .ho-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
     font-size: 0.9rem;
 }
+
 .ho-table th, .ho-table td {
     border: 1px solid #ddd;
     padding: 8px 10px;
     text-align: left;
 }
+
 .ho-table th {
     background-color: #f4f6f8;
     color: #333;
 }
+
 .ho-table input[type="text"], .ho-table input[type="number"] {
     width: 100%;
     padding: 6px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 .btn-sm-danger {
     background-color: #dc3545;
     color: white;
@@ -422,9 +419,11 @@ body.owner-mode .admin-only {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .btn-sm-danger:hover {
     background-color: #bd2130;
 }
+
 .summary-box {
     background: #f8f9fa;
     border: 1px solid #e9ecef;
@@ -435,9 +434,11 @@ body.owner-mode .admin-only {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 10px;
 }
+
 .summary-item {
     font-size: 0.85rem;
 }
+
 .summary-item strong {
     display: block;
     color: #555;
@@ -445,34 +446,26 @@ body.owner-mode .admin-only {
     text-transform: uppercase;
 }
 
-.admin-only{
-    margin-top: 30px; 
-    border-top: 2px solid #007bff; 
-    padding-top: 15px;
-}
-.contact-details{
+.contact-details {
     background: #f8f9fa; 
     padding: 15px; 
     border-radius: 5px;
 }
-.quote{
+
+.quote {
     color: #ecb314; 
     font-size: 0.65rem; 
     margin-bottom: 20px;
 }
-.loading{
+
+.loading {
     margin-top: 15px; 
     font-weight: bold; 
     color: #555;
 }
-.quote-introducton{
+
+.quote-introducton {
     font-size: 0.8rem; 
     color: #666; 
     margin-bottom: 10px;
-}
-#new-editor-role{
-    width: 100%; 
-    padding: 10px; 
-    border-radius: 4px; 
-    border: 1px solid #ccc;
 }
