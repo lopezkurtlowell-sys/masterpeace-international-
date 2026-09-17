@@ -197,6 +197,12 @@ body.owner-mode .admin-only {
     gap: 20px;
 }
 
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .admin-post-box {
     background: #fff;
     padding: 15px;

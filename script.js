@@ -1,7 +1,8 @@
 const CHURCH_NAME = "MasterPeace International";
         
+// email: lopezkurtlowell@gmail.com
 let accounts = [
-    { email: "lopezkurtlowell@gmail.com", pass: "1234510", role: "owner", ceoId: null },
+    { email: "a", pass: "1", role: "editor", ceoId: null },
     { email: "admin@masterpeace.org", pass: "admin123", role: "admin", ceoId: null },
     { email: "aldred@gmail.com", pass: "12345", role: "ceo", ceoId: "1" },
     { email: "gian@gmail.com", pass: "12345", role: "ceo", ceoId: "2" },
@@ -120,8 +121,8 @@ document.getElementById('login-form').addEventListener('submit', (e) => {
         currentUser = foundUser;
         errorDiv.innerText = "";
         
-        if (currentUser.role === 'owner' || currentUser.role === 'admin') {
-            document.body.className = "owner-mode";
+        if (currentUser.role === 'Editor' || currentUser.role === 'admin') {
+            document.body.className = "Editor-mode";
         } else {
             document.body.className = "user-mode";
         }
@@ -200,7 +201,7 @@ function renderCeoList() {
         
         let hoBtnHTML = '';
         if (currentUser) {
-            const isAdmin = currentUser.role === 'admin' || currentUser.role === 'owner';
+            const isAdmin = currentUser.role === 'admin' || currentUser.role === 'Editor';
             const isOwnFolder = currentUser.role === 'ceo' && currentUser.ceoId === id;
             
             if (isAdmin || isOwnFolder) {
