@@ -1,6 +1,6 @@
 const CHURCH_NAME = "MasterPeace International";
 
-// Extra CEO accounts and specific services assigned 
+//CEO accounts and specific services assigned 
 let accounts = [
     { email: "a", pass: "1", role: "editor", ceoId: null },
     { email: "admin@masterpeace.org", pass: "admin123", role: "admin", ceoId: null },
@@ -28,7 +28,7 @@ let posts = [
     }
 ];
 
-// Businesses assigned to services  and expanded portfolio section 
+// Businesses assigned to services  and portfolio section 
 let businesses = {
     1: {
         ceoName: "Aldred",
@@ -92,7 +92,7 @@ let businesses = {
     4: {
         ceoName: "Kaeya",
         service: "Graphics designer",
-        name: "EbonnyTech",
+        name: "Radiant Victory",
         banner: "example",
         desc: "Branding and digital graphics solutions.",
         contact: "kaeya@ebonnytech.com | (555) 555-5555",
@@ -284,7 +284,7 @@ function renderFeed() {
     }
 }
 
-// Requirement 8: Image not required for announcements
+// Image not required para sa announcements
 document.getElementById('create-post-form').addEventListener('submit', (e) => {
     e.preventDefault();
     posts.unshift({
@@ -304,7 +304,7 @@ function deletePost(postId) {
     }
 }
 
-// CEO & HO STATUS LOGIC
+// CEO & HO STATUS (KD wag mo galawin thx)
 function renderCeoList() {
     const container = document.getElementById('ceo-list-container');
     container.innerHTML = "";
