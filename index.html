@@ -11,7 +11,7 @@
     <!-- LOADING SCREEN -->
     <div id="loading-screen">
         <div class="spinner"></div>
-        <p class="Loading">Loading...</p>
+        <p class="loading">Loading...</p>
     </div>
 
     <!-- LOGIN SCREEN -->
@@ -46,22 +46,22 @@
             
             <div class="header-controls">
                 <span id="user-mode-badge" class="badge badge-viewer">Viewing Mode</span>
-                <button class="btn btn-secondary" style="width: auto; margin-top:0;" id="nav-settings-btn">Settings</button>
+                <button class="btn btn-secondary btn-nav-compact" id="nav-settings-btn">Settings</button>
             </div>
         </header>
 
         <div class="main-container">
             <main class="feed-section">
-                <!-- Announcement Posting UI (Requirement 8: Image input is optional) -->
-                <div class="admin-post-box" id="announcement-post-box" style="display:none;">
+                <!-- Announcement Posting UI -->
+                <div class="admin-post-box is-hidden" id="announcement-post-box">
                     <h3>Create New Announcement</h3>
-                    <form id="create-post-form" style="margin-top: 10px;">
+                    <form id="create-post-form" class="mt-10">
                         <div class="form-group">
-                            <label>Picture URL (Optional)</label>
+                            <label for="post-image-url">Picture URL (Optional)</label>
                             <input type="url" id="post-image-url" placeholder="http://example.com/image.jpg">
                         </div>
                         <div class="form-group">
-                            <label>Description</label>
+                            <label for="post-caption-input">Description</label>
                             <textarea id="post-caption-input" rows="3" placeholder="Write your announcement..." required></textarea>
                         </div>
                         <button type="submit" class="btn">Post Announcement</button>
@@ -85,12 +85,12 @@
             <div class="footer-content">
                 <div>
                     <h4>Contact Us</h4>
-                    <p style="margin-top: 5px; font-size: 0.9rem;">ps.normanlopez@gmail.com</p>
-                    <p style="font-size: 0.9rem;">(555) 019-2834</p>
+                    <p class="footer-text mt-5">ps.normanlopez@gmail.com</p>
+                    <p class="footer-text">(555) 019-2834</p>
                 </div>
                 <div>
                     <h4>Social Media</h4>
-                     <a href="https://www.facebook.com/ChurchofChristMaybancal/">Facebook page</a>
+                    <a href="https://www.facebook.com/ChurchofChristMaybancal/">Facebook page</a>
                 </div>
             </div>
         </footer>
@@ -101,64 +101,64 @@
         <header class="header">
             <div class="church-name display-church-name"></div>
             <div class="header-controls">
-                <button class="btn btn-secondary" style="width: auto; margin-top:0;" id="back-to-main-btn">Back to Main</button>
+                <button class="btn btn-secondary btn-nav-compact" id="back-to-main-btn">Back to Main</button>
             </div>
         </header>
 
         <div class="business-container">
             <img id="biz-banner" class="business-banner" src="" alt="Business Banner">
             <h1 id="biz-name"></h1>
-            <h3 id="biz-ceo" style="color: #555; margin-bottom: 15px;"></h3>
-            <p id="biz-desc" style="line-height: 1.6; margin-bottom: 20px;"></p>
+            <h3 id="biz-ceo" class="biz-subtitle"></h3>
+            <p id="biz-desc" class="biz-description"></p>
 
-            <!-- Display Portfolio Section (Requirement 6) -->
-            <div id="view-portfolio-section" style="background:#eef6ff; padding:15px; border-radius:5px; margin-bottom:20px; display:none;">
+            <!-- Display Portfolio Section -->
+            <div id="view-portfolio-section" class="portfolio-card is-hidden">
                 <h4>CEO Credentials & Links:</h4>
-                <div id="portfolio-links-display" style="margin-top:10px;"></div>
+                <div id="portfolio-links-display" class="mt-10"></div>
             </div>
 
             <div class="contact-details">
                 <h4>Contact Details:</h4>
-                <p id="biz-contact" style="margin-top: 5px;"></p>
+                <p id="biz-contact" class="mt-5"></p>
             </div>
 
             <!-- Edit Business Form -->
-            <div id="edit-business-panel" style="margin-top: 30px; border-top: 2px solid #007bff; padding-top: 15px; display:none;">
+            <div id="edit-business-panel" class="edit-panel is-hidden">
                 <h3>Edit Business Information</h3>
-                <form id="edit-business-form" style="margin-top: 10px;">
+                <form id="edit-business-form" class="mt-10">
                     <div class="form-group">
-                        <label>Business Name</label>
+                        <label for="edit-biz-name">Business Name</label>
                         <input type="text" id="edit-biz-name" required>
                     </div>
                     <div class="form-group">
-                        <label>Banner Image URL</label>
+                        <label for="edit-biz-banner">Banner Image URL</label>
                         <input type="url" id="edit-biz-banner" required>
                     </div>
                     <div class="form-group">
-                        <label>Description</label>
+                        <label for="edit-biz-desc">Description</label>
                         <textarea id="edit-biz-desc" rows="4" required></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Contact Info</label>
+                        <label for="edit-biz-contact">Contact Info</label>
                         <input type="text" id="edit-biz-contact" required>
                     </div>
 
-                    <!-- CEO Custom Portfolio Controls (Requirement 6) -->
-                    <h4 style="margin-top:20px;">Portfolio / Resume Display Settings</h4>
-                    <div class="form-group" style="display:flex; align-items:center; gap:10px;">
-                        <input type="checkbox" id="edit-show-portfolio" style="width:auto;">
-                        <label for="edit-show-portfolio" style="margin-bottom:0;">Show Resume, Portfolio & Website in Viewing Mode</label>
+                    <!-- CEO Custom Portfolio Controls -->
+                    <h4 class="mt-20">Portfolio / Resume Display Settings</h4>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="edit-show-portfolio" class="checkbox-input">
+                        <label for="edit-show-portfolio" class="mb-0">Show Resume, Portfolio & Website in Viewing Mode</label>
                     </div>
                     <div class="form-group">
-                        <label>Resume Link</label>
+                        <label for="edit-biz-resume">Resume Link</label>
                         <input type="url" id="edit-biz-resume" placeholder="https://">
                     </div>
                     <div class="form-group">
-                        <label>Portfolio Link</label>
+                        <label for="edit-biz-portfolio">Portfolio Link</label>
                         <input type="url" id="edit-biz-portfolio" placeholder="https://">
                     </div>
                     <div class="form-group">
-                        <label>Website Link</label>
+                        <label for="edit-biz-website">Website Link</label>
                         <input type="url" id="edit-biz-website" placeholder="https://">
                     </div>
 
@@ -173,26 +173,26 @@
         <header class="header">
             <div class="church-name display-church-name"></div>
             <div class="header-controls">
-                <button class="btn btn-secondary" style="width: auto; margin-top:0;" id="settings-back-btn">Back</button>
+                <button class="btn btn-secondary btn-nav-compact" id="settings-back-btn">Back</button>
             </div>
         </header>
 
         <div class="settings-container">
             <h2>Settings</h2>
             <br>
-            <div class="settings-group" id="create-account-settings-panel" style="display:none;">
+            <div class="settings-group is-hidden" id="create-account-settings-panel">
                 <h3>Add New Account (Editor Only)</h3>
-                <form id="add-editor-form" style="margin-top: 10px;">
+                <form id="add-editor-form" class="mt-10">
                     <div class="form-group">
-                        <label>Email/Username</label>
+                        <label for="new-editor-email">Email/Username</label>
                         <input type="text" id="new-editor-email" placeholder="email@gmail.com" required>
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
+                        <label for="new-editor-pass">Password</label>
                         <input type="password" id="new-editor-pass" placeholder="Password" required>
                     </div>
                     <div class="form-group">
-                        <label>Role</label>
+                        <label for="new-editor-role">Role</label>
                         <select id="new-editor-role">
                             <option value="ceo">CEO</option>
                             <option value="editor">Editor</option>
@@ -200,7 +200,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Service (If CEO)</label>
+                        <label for="new-ceo-service">Service (If CEO)</label>
                         <select id="new-ceo-service">
                             <option value="Bookkeeping/qbo">Bookkeeping/qbo</option>
                             <option value="Lead generation">Lead generation</option>
@@ -235,7 +235,7 @@
 
     <!-- HO STATUS TAB (MODAL) -->
     <div id="ho-modal" class="modal-overlay">
-        <div class="modal-content" style="max-width: 800px; width: 95%;">
+        <div class="modal-content modal-lg">
             <div class="modal-header">
                 <h3 id="ho-modal-title">HO Status Tab</h3>
                 <button class="close-btn" id="close-ho-modal">&times;</button>

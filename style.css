@@ -1,5 +1,3 @@
-/* MASTERPEACE INTERNATIONAL - BLACK & GOLD THEME */
-
 /* DESIGN SYSTEM & ROOT VARIABLES */
 :root {
     /* Color Palette */
@@ -96,6 +94,16 @@ body {
     box-shadow: 0 0 8px #d4af374d;
 }
 
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-input {
+    width: auto !important;
+}
+
 /* Primary Button Styles */
 .btn {
     width: 100%;
@@ -121,6 +129,11 @@ body {
 
 .btn:hover {
     box-shadow: 0 0 15px #d4af3766;
+}
+
+.btn-nav-compact {
+    width: auto;
+    margin-top: 0;
 }
 
 /* Secondary & Danger Buttons */
@@ -208,6 +221,15 @@ body {
     font-size: 0.85rem;
     margin-top: 5px;
 }
+
+.is-hidden {
+    display: none;
+}
+
+.mt-5 { margin-top: 5px; }
+.mt-10 { margin-top: 10px; }
+.mt-20 { margin-top: 20px; }
+.mb-0 { margin-bottom: 0; }
 
 /* HEADER & NAVIGATION */
 .header {
@@ -448,25 +470,31 @@ body {
     margin-bottom: 5px;
 }
 
-#biz-ceo {
+.biz-subtitle {
     color: var(--text-muted);
     font-weight: 500;
+    margin-bottom: 15px;
 }
 
-#view-portfolio-section {
+.biz-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.portfolio-card {
     background: var(--card-bg-alt);
-    border: 1px solid #2a2a2a;
-    border-radius: 8px;
     padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
     margin-bottom: 20px;
     color: var(--text-light);
 }
 
-#view-portfolio-section h4 {
+.portfolio-card h4 {
     color: var(--gold-primary);
 }
 
-#view-portfolio-section a {
+.portfolio-card a {
     color: var(--gold-light);
 }
 
@@ -480,6 +508,12 @@ body {
 
 .contact-details h4 {
     color: var(--gold-primary);
+}
+
+.edit-panel {
+    margin-top: 30px;
+    border-top: 2px solid var(--gold-primary);
+    padding-top: 15px;
 }
 
 /* SETTINGS SCREEN */
@@ -557,6 +591,11 @@ body {
     padding: 25px;
     border: var(--gold-border);
     box-shadow: 0 10px 30px #000000e6, 0 0 20px #d4af3726;
+}
+
+.modal-lg {
+    max-width: 800px;
+    width: 95%;
 }
 
 .modal-header {
@@ -665,6 +704,10 @@ body {
 .footer h4 {
     color: var(--gold-primary);
     margin-bottom: 10px;
+}
+
+.footer-text {
+    font-size: 0.9rem;
 }
 
 .footer a {
